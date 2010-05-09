@@ -5,7 +5,7 @@ import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Graphics;
-import java.awt.Image;
+import java.awt.Point;
 import java.io.FileNotFoundException;
 
 import javax.swing.ImageIcon;
@@ -13,11 +13,16 @@ import javax.swing.ImageIcon;
 import de.hsm.oot.werwars.Guitilities;
 
 public class Symbol extends Component {
+	private static final long serialVersionUID = -5587020160974903623L;
+	
 	private int value;
 	private ImageIcon image;
 	
 	public Symbol(int value) {
 		this.value = value;
+		this.setLocation(new Point(0,0));
+		this.setSize(new Dimension(50,50));
+		this.setMinimumSize(new Dimension(50,50));
 		this.setPreferredSize(new Dimension(50,50));
 	}
 	
@@ -57,6 +62,10 @@ public class Symbol extends Component {
 		}
 		g.setColor(Color.GRAY); g.drawRect(1,1,this.getWidth()-3,this.getHeight()-3);
 		g.setColor(Color.BLACK);g.drawRect(0,0,this.getWidth()-1,this.getHeight()-1);
+	}
+	
+	public String toString() {
+		return Integer.toString(this.value);
 	}
 	
 	private void paintDot(Graphics g,int x,int y) {

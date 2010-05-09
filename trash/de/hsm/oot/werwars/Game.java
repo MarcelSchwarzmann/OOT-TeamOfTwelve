@@ -13,17 +13,17 @@ import de.hsm.oot.werwars.rooms.Room;
 import de.hsm.oot.werwars.suspects.Suspect;
 
 public class Game {
-	private Clock clock; //the game has got a clock
+	protected Clock clock; //the game has got a clock
 	
-	private Board board; //the game has got a board
-	private List<Forage> forages; //the game has got a number of forages (for the different rooms)
-	private List<Animal> animals; //the game has got a number of animals (for the different rooms)
-	private List<Suspect> suspects; //the game has got a number of animals (for the different rooms)
+	protected Board board; //the game has got a board
+	protected List<Forage> forages; //the game has got a number of forages (for the different rooms)
+	protected List<Animal> animals; //the game has got a number of animals (for the different rooms)
+	protected List<Suspect> suspects; //the game has got a number of animals (for the different rooms)
 	
-	private List<Room> rooms; //the game has got a specific set of rooms	
+	protected List<Room> rooms; //the game has got a specific set of rooms	
 	
-	private Ghost ghost; //the game has got a ghost
-	private Player[] players; //the game has got one or multiple playsers
+	protected Ghost ghost; //the game has got a ghost
+	protected Player[] players; //the game has got one or multiple playsers
 	
 	public Game() throws IOException {		
 		List<Forage.Sort> sorts = Arrays.asList(Forage.Sort.values());

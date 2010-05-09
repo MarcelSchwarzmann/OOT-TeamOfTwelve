@@ -1,7 +1,5 @@
 package de.hsm.oot.werwars.rooms;
 
-import java.awt.Component;
-import java.awt.Container;
 import java.util.List;
 
 import de.hsm.oot.werwars.Displayable;

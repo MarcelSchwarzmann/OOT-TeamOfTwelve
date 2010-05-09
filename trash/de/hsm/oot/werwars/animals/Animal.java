@@ -1,17 +1,16 @@
 package de.hsm.oot.werwars.animals;
 
-import java.awt.Component;
-import java.awt.Graphics;
 import java.io.IOException;
 import java.util.Properties;
 
 import de.hsm.oot.werwars.Displayable;
-import de.hsm.oot.werwars.Guitilities;
 import de.hsm.oot.werwars.Utilities;
 import de.hsm.oot.werwars.forages.Forage;
 import de.hsm.oot.werwars.gui.AnimalComponent;
 
 public class Animal implements Displayable<AnimalComponent> {
+	private static final long serialVersionUID = -5587020160934903623L;
+	
 	public enum Race {
 		BOAR,DOG,DONKEY,DRAGON,GOAT,HORSE,OWL,PEACOCK,SNAKE;
 		private String properties;
@@ -32,9 +31,9 @@ public class Animal implements Displayable<AnimalComponent> {
 	
 	public final Properties properties;
 	
-	private Race race; //an animal is of a specific race
-	private Forage.Sort forage; //an animals likes a specific forage
-	private boolean gaveHint; //an animals gives a hint exactly once
+	protected Race race; //an animal is of a specific race
+	protected Forage.Sort forage; //an animals likes a specific forage
+	protected boolean gaveHint; //an animals gives a hint exactly once
 	
 	public Animal(Race race,Forage.Sort forage) throws IOException {
 		this.race = race;

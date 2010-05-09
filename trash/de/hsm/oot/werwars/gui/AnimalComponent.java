@@ -9,12 +9,14 @@ import de.hsm.oot.werwars.Guitilities;
 import de.hsm.oot.werwars.animals.Animal;
 
 public class AnimalComponent extends Component {
-	private Animal animal;
+	private static final long serialVersionUID = -1353845368845490621L;
+	
+	protected Animal animal;
 	
 	public AnimalComponent(Animal animal) {
 		this.animal = animal;
-		this.setLocation(new Point(5,5));
-		this.setSize(new Dimension(20,20));
+		this.setLocation(new Point(0,0));
+		this.setSize(new Dimension(50,70));
 	}
 	
 	public void paint(Graphics g) {

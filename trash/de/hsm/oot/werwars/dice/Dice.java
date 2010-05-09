@@ -6,7 +6,7 @@ import java.io.FileNotFoundException;
  * @author Kristian Kraljic
  */
 public class Dice {
-	private Symbol[] symbols;
+	public final Symbol[] symbols;
 	/**
 	 * 
 	 */
@@ -24,7 +24,7 @@ public class Dice {
 	 */
 	public Symbol roll() {
 		if(symbols.length!=0)
-			return symbols[(int)Math.random()*symbols.length];
+			return symbols[(int)(Math.random()*symbols.length)];
 		else throw new CantRollEmptyDiceError();
 	}
 }

@@ -1,7 +1,5 @@
 package de.hsm.oot.werwars.rooms;
 
-import java.awt.Component;
-import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.Point;
 
@@ -12,15 +10,12 @@ import de.hsm.oot.werwars.gui.RoomContainer;
 import de.hsm.oot.werwars.suspects.Chest;
 
 public class Throneroom extends Room {
-
-
 	public Throneroom(Game game, Animal animal, Forage forage, Chest chest) {
 		super(game, animal, forage, chest);
-		// TODO Auto-generated constructor stub
 	}
 
 	public RoomContainer getComponent() {
-		return new RoomContainer(this,new Point(240,160),new Dimension(310,120));
+		return new RoomContainer(this,new Point(240,160),new Dimension(310,120),
+                                  new Point(30,30),new Point(220,20));
 	}
-
 }

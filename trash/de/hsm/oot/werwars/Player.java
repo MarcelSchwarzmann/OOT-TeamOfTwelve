@@ -1,5 +1,11 @@
 package de.hsm.oot.werwars;
 
-public class Player extends Person {
+import java.io.IOException;
 
+import javax.swing.ImageIcon;
+
+public class Player extends Person {
+	public ImageIcon getImage() throws IOException {
+		return null;
+	}
 }

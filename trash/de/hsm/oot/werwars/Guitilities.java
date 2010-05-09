@@ -5,10 +5,13 @@ import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.Toolkit;
 import java.io.FileNotFoundException;
+import java.util.HashMap;
 
 import javax.swing.ImageIcon;
 
 public class Guitilities {
+	private static HashMap<String,ImageIcon> images = new HashMap<String,ImageIcon>();
+	
 	public static Dimension getScreenSize() {
 		return Toolkit.getDefaultToolkit().getScreenSize();
 	}
@@ -28,11 +31,13 @@ public class Guitilities {
 		if(!image.startsWith("/")) path.insert(0,'/');
 		if(!image.startsWith("/resources/"))
 			path.insert(1,"resources/werwars/images/");
-		try {
-			return new ImageIcon(Guitilities.class.getResource(path.append(image).toString()));
-		} catch(NullPointerException e) {
-			throw new FileNotFoundException(new StringBuilder("Image/icon ").append(image).append(" was not found.").toString());
-		}
+		if(!images.containsKey(path.append(image).toString()))
+			try {
+				images.put(path.toString(),new ImageIcon(Guitilities.class.getResource(path.toString())));			
+			} catch(NullPointerException e) {
+				throw new FileNotFoundException(new StringBuilder("Image/icon ").append(image).append(" was not found.").toString());
+			}
+		return images.get(path.toString());
 	}
 	public static ImageIcon createImageIcon(String image, String description) throws FileNotFoundException {
 		ImageIcon icon = createImageIcon(image);

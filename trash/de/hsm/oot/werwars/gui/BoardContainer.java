@@ -3,7 +3,6 @@ package de.hsm.oot.werwars.gui;
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.Graphics;
-import java.awt.Label;
 import java.io.FileNotFoundException;
 
 import de.hsm.oot.werwars.Board;
@@ -11,7 +10,10 @@ import de.hsm.oot.werwars.Guitilities;
 import de.hsm.oot.werwars.rooms.Room;
 
 public class BoardContainer extends Container {
-	private Board board;
+	private static final long serialVersionUID = -5312414668390553755L;
+	
+	protected Board board;
+	
 	public BoardContainer(Board board) {
 		this.board = board;
 		this.setLayout(null); //null layout

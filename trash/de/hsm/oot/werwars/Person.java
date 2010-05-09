@@ -1,5 +1,7 @@
 package de.hsm.oot.werwars;
 
-public class Person {
+import de.hsm.oot.Imagable;
+
+public abstract class Person implements Imagable {
 
 }

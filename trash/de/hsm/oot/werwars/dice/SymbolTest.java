@@ -3,7 +3,6 @@ package de.hsm.oot.werwars.dice;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Frame;
-import java.awt.GridLayout;
 
 public class SymbolTest {
 	public static void main(String args[]) {
