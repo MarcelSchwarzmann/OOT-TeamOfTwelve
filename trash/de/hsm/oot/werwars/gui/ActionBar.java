@@ -8,7 +8,6 @@ import java.awt.Graphics;
 
 import de.hsm.oot.werwars.Game;
 import de.hsm.oot.werwars.dice.Dice;
-import de.hsm.oot.werwars.dice.DiceContainer;
 
 public class ActionBar extends Container {
 	private static final long serialVersionUID = 3163022956124019680L;

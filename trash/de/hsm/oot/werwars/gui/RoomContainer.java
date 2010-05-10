@@ -31,6 +31,7 @@ public class RoomContainer extends Container {
 		this.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent mouseevent) { //clicked on the room
 				//TODO: Add some content
+				System.out.println("You have clicked on the "+room.getClass().getSimpleName());
 			}
 			public void mouseEntered(MouseEvent mouseevent) { //entered the room
 				//TODO: Add some content							
